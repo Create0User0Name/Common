@@ -16,9 +16,11 @@ const int MAXSTRING = 2048;
 
 #define MACRO_RETURN_IF(expr) if(expr){return;}
 #define MACRO_RETURN_TRUE_IF(expr) if(expr){return true;}
+#define MACRO_RETURN_NULLSTR_IF(expr) if(expr){return "";}
 #define MACRO_RETURN_FALSE_IF(expr) if(expr){return false;}
 #define MACRO_BREAK_IF(expr) if(expr){break;}
 #define MACRO_CONTINUE_IF(expr) if(expr){continue;}
+
 
 //Double≈–0
 inline bool IsDoubleZero(const double& d)
