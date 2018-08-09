@@ -1,0 +1,10 @@
+﻿生成启动时间为 2018/8/9 21:47:27。
+     1>项目“F:\Project\Common\Comm\Comm\Comm.vcxproj”在节点 2 上(Build 个目标)。
+     1>Lib:
+         C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\Lib.exe /OUT:"F:\Project\Common\Comm\Release\Comm.lib" /NOLOGO /LTCG Release\common.obj
+         Comm.vcxproj -> F:\Project\Common\Comm\Release\Comm.lib
+     1>已完成生成项目“F:\Project\Common\Comm\Comm\Comm.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:00.37
