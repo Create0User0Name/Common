@@ -1,4 +1,4 @@
-#include "common.h"
+#include <comm\common.h>
 
 bool IsDoubleZero(const double& d)
 {
