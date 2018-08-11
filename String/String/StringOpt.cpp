@@ -1,11 +1,11 @@
+/// @file	 StringOpt.h
+/// @author  石杰
+/// @version 1.0
+/// @date	 2018/6/2 22:20
+/// @brief	 字符串操作
+
 #include <StringOpt/StringOpt.h>
 
-/*
-功能：		字符串拆分
-输入参数：	str待拆分字符串；delim分隔符
-输出参数：	输出拆分后的字符串
-返回值：	无
-*/
 void StringSplit(std::string const& str, std::vector<std::string>& strv, std::string const& delim) 
 {
 	char *temp = new char[str.size() + 1];
