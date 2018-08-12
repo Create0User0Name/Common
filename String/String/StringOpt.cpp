@@ -108,6 +108,7 @@ void StringUpper(std::string& str)
 */
 std::string DislodgeStringNotChar(std::string& str)
 {
+
 	MACRO_RETURN_NULLSTR_IF(str.empty());
 	char* cpstr = new char[str.size()+1]();
 	for(int i = 0, y = 0; i < (int)str.size(); i++)

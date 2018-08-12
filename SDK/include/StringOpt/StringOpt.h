@@ -26,10 +26,12 @@ void StringSplit(
 
 /// @brief	字符串拼接
 /// @retval 返回拼接后的字符串
+/// @note	参数列表最后需要自定义结束标志 如NULL, 否则会异常
 std::string strcat(
 	char const* str1,	/// < [in]  要连接的字符串 
 	char const* str2,   /// < [in]
 	...					/// < [in]  连接列表
+						/// < [in]  结束标志 NULL
 	);
 
 /// @brief  字符串修剪（截取字符串首尾的空格，制表符，回车，换行）
@@ -51,14 +53,12 @@ void StringUpper(
 
 /// @brief  去除字符串中非字母字符
 /// @retval 返回处理后的字符串
-/// @note	
 std::string DislodgeStringNotChar(
 	std::string& str  ///  <  [in]	待处理字符串		
 	);
 
 /// @brief  去除字符串中所有空格
 /// @retval 返回处理后的字符串
-/// @note	
 std::string DislodgeStringSpace(
 	std::string& str  /// < [in]  待处理字符串
 	);

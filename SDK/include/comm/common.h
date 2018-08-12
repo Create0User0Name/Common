@@ -41,7 +41,7 @@ bool IsDoubleZero(
 /// @retval  返回字符串时间(包括说明字符串)
 /// @note	 例如: 现在的时间: 2018/08/11 19:10:00
 std::string GetTime(
-	std::string const& str = ""   /// < [in] 时间前是否带说明字符串
+	char*const str = ""   /// < [in] 时间前是否带说明字符串
 	);
 
 
