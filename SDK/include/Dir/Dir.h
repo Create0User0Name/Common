@@ -4,9 +4,11 @@
 /// @date	 2018/6/2 22:20
 /// @brief   对文件夹的操作
 
+/**
 /// @brief	增加 FindFileName 类
 /// @date	2018/8/12 13:08
 /// @attention  FindFileName 现在只支持查找指定路径下的所有文件,包括子文件夹下的文件
+**/
 
 #ifndef _DIR_H_
 #define _DIR_H_
@@ -25,15 +27,13 @@ public:
 	/// @brief  创建文件夹，可创建多级
 	/// @retval true 创建成功
 	/// @retval false 创建失败
-	static bool CreateDir(
-		const std::string& path		/// < [in]  创建的路径
-		);
+	/// @param  path [in]  创建的路径
+	static bool CreateDir(const std::string& path);
 
 	/// @brief  获得当前工作路径
 	/// @retval 返回当前的工作路径
-	static std::string& GetWorkPath(
-		std::string& path			/// < [out]  获得的路径
-		);
+	/// @param  path [out]  获得的路径
+	static std::string& GetWorkPath(std::string& path);
 };
 
 /// @brief  查询指定目录下的文件或文件夹(递归)
@@ -42,16 +42,14 @@ class FindFileName
 public:
 	/// @brief	构造函数
 	/// @note   查询文件名 *, *.text, a.*
-	FindFileName(
-		char const* fPath,			///   < [in] 查询路径
-		char const* fName /*"*"*/	///   < [in] 查询文件名
-		);
+	/// @param  fPath [in] 查询路径
+	/// @param  fName [in] 查询文件名
+	FindFileName(char const* fPath,	char const* fName /*"*"*/);
 
 	/// @brief	重载查找函数
-	void Find(
-		char const* pPath,			///   < [in] 查询路径
-		char const* fName			///   < [in] 查询文件名
-		);
+	/// @param  fPath [in] 查询路径
+	/// @param  fName [in] 查询文件名
+	void Find(char const* pPath, char const* fName);
 
 	/// @brief  查找开始
 	void Find(void);
@@ -82,26 +80,22 @@ private:
 private:
 	/// @brief	初始化
 	/// @note   查询文件名 *, *.text, a.*
-	void init(
-		char const* fPath,			///   < [in] 查询路径
-		char const* fName/**.**/	///   < [in] 查询文件名
-		);
+	/// @param  fPath [in] 查询路径
+	/// @param  fName [in] 查询文件名
+	void init(char const* fPath, char const* fName/**.**/);
 
 	/// @brief	指定路径下查找文件
-	void Find_Next(
-		string &path    /// < [in] 查询路径
-		);
+	/// @param  path [in] 查询路径
+	void Find_Next(string &path);
 
 	/// @brief	查找错误处理
-	void ErrorInfo(
-		char *szBuf		/// < [out]  保存返回的错误信息
-		);
+	/// @param  szBuf [out]  保存返回的错误信息
+	void ErrorInfo(char *szBuf);
 
 	/// @brief  比对匹配文件名
-	void FileCompare(
-		string const& temp,		/// < [in]  当前文件路径
-		char const* str			/// < [in]  当前文件名(包含后缀)
-		);
+	/// @param  temp [in]  当前文件路径
+	/// @param  str  [in]  当前文件名(包含后缀)
+	void FileCompare(string const& temp, char const* str);
 };
 
 #endif _DIR_H_

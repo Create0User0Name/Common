@@ -18,21 +18,19 @@ Modification:
 #include <comm\common.h>
 
 /// @brief	字符串分割
-void StringSplit(
-	std::string const& str,			/// < [in]  要分割的字符串
-	std::vector<std::string>& strv, /// < [out] 分割后的字符串向量
-	std::string const& delim		/// < [in]  分割标志字符
-	);
+/// @param  str   [in]  要分割的字符串
+/// @param  strv  [out] 分割后的字符串向量
+/// @param  delim [in]  分割标志字符
+void StringSplit(std::string const& str,	std::vector<std::string>& strv, std::string const& delim);
 
 /// @brief	字符串拼接
 /// @retval 返回拼接后的字符串
 /// @note	参数列表最后需要自定义结束标志 如NULL, 否则会异常
-std::string strcat(
-	char const* str1,	/// < [in]  要连接的字符串 
-	char const* str2,   /// < [in]
-	...					/// < [in]  连接列表
-						/// < [in]  结束标志 NULL
-	);
+/// @param  str1 [in]  要连接的字符串 
+/// @param  str2 [in]  要连接的字符串 
+/// @param  ...	 [in]  连接列表
+/// @param  [in]  结束标志 NULL
+std::string strcat(char const* str1, char const* str2, ...);
 
 /// @brief  字符串修剪（截取字符串首尾的空格，制表符，回车，换行）
 /// @retval 返回被修剪后的字符串本身
